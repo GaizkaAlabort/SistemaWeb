@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+body {
+    overflow-x:hidden;
+    background:rgb(182, 182, 182);
+    margin: 100;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    font-weight: 10;
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+section #text{
+    position :absolute;
+    color:rgb(0, 0, 143);
+    font-size: 10vh;
+    text-align:center;
+    line-height: 0,30em;
+    letter-spacing: 5px;
+    font-family: 'Staatliches', cursive;
+}
+
+section #text span{
+    font-size: 10;
+    letter-spacing: 15px;
+    font-weight: 400;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+input[type="text"], input[type="password"], input[type="tel"],input[type="DNI"]{
+
+    outline: none;
+    padding: 20px;
+    display: block;
+    width: 300px;
+    border-radius: 3px;
+    border : 1 px solid rgb(6, 3, 255);
+    margin: 20px auto;
+
+}
+input[type="dateR"]{
+    outline: none;
+    padding: 20px;
+    display: block;
+    width: 100px;
+    border-radius: 3px;
+    border : 1 px solid rgb(6, 3, 255);
+    margin: 20px auto;
+}
+
+input[type="submit"]{
+    padding: 10px;
+    color: #fff;
+    background: #2cbcff;
+    width: 200px;
+    margin: 20px auto;
+    margin-top: 5%;
+    border-radius: 0%;
+    border: 0;
+    cursor: pointer;
+}
+
+
+input[type="submit"]:hover{
+    background-color: #00858a;
+}
+header {
+    border-bottom: 2px solid rgb(199, 198, 198);
+    padding: 20px ;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align:center;
+
+}
+header a{
+    text-decoration: none ;
+    color: rgb(104, 103, 103);
+
+}

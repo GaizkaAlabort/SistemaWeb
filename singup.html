@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta  charset="utf-8">
+    <title>Registrate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <header>
+        <a href="index.html">Concesionario Gajo</a>
+    </header> 
+
+    <h1>Registrate</h1>
+   
+  
+    <form action="registro.php" method="POST">
+        <input type="text" name="email" placeholder="Introduce email"  pattern="[_a-z0-9-]+(.[_a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)(.[a-z]{2,3})"required >
+        <input type="text" name="nombre" placeholder="Introduce tu nombre">
+        <input type="text" name="apellidos" placeholder="Introduce tus apellidos">
+        <input type="password" name="contraseña" placeholder="Introduce la contraseña">
+        <input type="tel" name="telefono" placeholder="Introduce tel&eacute;fono" pattern="[0-9]{9}">
+        <input type="DNI" name="DNI" placeholder="Introduce DNI" pattern="[0-9]{8}[a-zA-Z]">
+       
+        Fecha de nacimiento: <input type="dateR" name="FechaNacimiento"required>
+       
+        <a href="login.html"><input type="submit" value="Enviar"></a>
+    </form>
+
+<span>o <a href="login.html">Identificate</a></span>
+
+</body>
+</html> 
