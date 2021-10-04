@@ -3,6 +3,7 @@ function validar(){
     if(malNombre(document.registro.nombre)) return;
     if(malTLF(document.registro.telefono)) return;
     if(malDNI(document.registro.dni)) return;
+    
     document.registro.submit();
 }
 
