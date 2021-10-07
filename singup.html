@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script type="text/javascript" src="main.js"></script>
+    
 </head>
 <body>
     
@@ -20,12 +21,12 @@
 
 
     <form name="registro" action="login.html">
-        <input type="text" name="email" placeholder="Introduce email" >
-        <input type="text" name="nombre" placeholder="Introduce tu nombre" >
-        <input type="text" name="apellidos" placeholder="Introduce tus apellidos">
-        <input type="password" name="contraseña" placeholder="Introduce la contraseña">
-        <input type="text" name="telefono" placeholder="Introduce tel&eacute;fono">
-        <input type="text" name="dni" placeholder="Introduce DNI">
+        <input type="text" name="email" placeholder="Introduce email" required>
+        <input type="text" name="nombre" placeholder="Introduce tu nombre" required>
+        <input type="text" name="apellidos" placeholder="Introduce tus apellidos" required>
+        <input type="password" name="contraseña" placeholder="Introduce la contraseña" required>
+        <input type="text" name="telefono" placeholder="Introduce tel&eacute;fono" required>
+        <input type="text" name="dni" placeholder="Introduce DNI" required>
         Fecha de nacimiento: <input type="date" name="FechaNacimiento" required>
         <br></br>
         <input type="button" value="Enviar" onclick="validarRegistro()">
