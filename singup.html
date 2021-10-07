@@ -17,18 +17,18 @@
     </header> 
 
     <h1>Registrate</h1>
-   
-  
-    <form name="registro" action="singup.html" method="POST">
-        <input type="text" name="email" placeholder="Introduce email" required>
-        <input type="text" name="nombre" placeholder="Introduce tu nombre" required>
+
+
+    <form name="registro" action="login.html">
+        <input type="text" name="email" placeholder="Introduce email" >
+        <input type="text" name="nombre" placeholder="Introduce tu nombre" >
         <input type="text" name="apellidos" placeholder="Introduce tus apellidos">
         <input type="password" name="contraseña" placeholder="Introduce la contraseña">
-        <input type="text" name="telefono" placeholder="Introduce tel&eacute;fono" required>
-        <input type="text" name="dni" placeholder="Introduce DNI" required>
+        <input type="text" name="telefono" placeholder="Introduce tel&eacute;fono">
+        <input type="text" name="dni" placeholder="Introduce DNI">
         Fecha de nacimiento: <input type="date" name="FechaNacimiento" required>
-        
-        <a href="login.html" onclick="validar()" ><input type="submit" value="Enviar"></a>
+        <br></br>
+        <input type="button" value="Enviar" onclick="validarRegistro()">
     </form>
 
 <span>o <a href="login.html">Identificate</a></span>

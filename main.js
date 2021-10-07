@@ -1,10 +1,17 @@
-function validar(){
+function validarRegistro(){
     if(malEmail(document.registro.email)) return;
     if(malNombre(document.registro.nombre)) return;
     if(malTLF(document.registro.telefono)) return;
     if(malDNI(document.registro.dni)) return;
+    if(malFecha(document.registro.FechaNacimiento)) return;
+
+    document.registro.submit()
+}
+
+function validarIdentificacion(){
+    if(malEmail(document.identificacion.email)) return;
     
-    document.registro.submit();
+    document.identificacion.submit()
 }
 
 function malEmail(campo){
@@ -20,7 +27,7 @@ function malEmail(campo){
 }
 
 function malNombre(campo){
-    var nombre=/^[A-Za-z]+/
+    var nombre=/^[A-Z][a-z]+/;
 
     if(!nombre.test(campo.value)){
         alert("El nombre " + campo.value + " es incorrecto.");
@@ -141,3 +148,51 @@ function malDNI(campo){
     return false;
 }
 
+function malFecha(campo){
+    var fecha=/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
+    
+
+    var hoy= new Date();
+    var añohoy=hoy.getFullYear(); 
+    var meshoy=hoy.getMonth()+1;
+    var diahoy=hoy.getDate();
+
+    var fechae=campo.value;
+    var año=fechae.substring(0,4);
+    var mes=fechae.substring(5,7);
+    var dia=fechae.substring(8,10);
+    
+    var comprobacion=new Date(año, mes, 0);
+    var comprobacionDia=comprobacion.getDate();
+
+    if(!fecha.test(campo.value) || añohoy-año<0 || dia>comprobacionDia){
+        alert("La fecha de nacimiento " + campo.value + " es incorrecta.");
+        campo.focus();
+        campo.select();
+        return true;
+    }
+
+    if(añohoy-año<18){
+        alert("Eres menor de edad por " + (18-(añohoy-año))+ " año/años.");
+        campo.focus();
+        campo.select();
+        return true;
+    } else if(añohoy-año==18){
+        if(mes>meshoy){
+            alert("Eres menor de edad por " + -(meshoy-mes)+ " mes/meses." );
+            campo.focus();
+            campo.select();
+            return true;
+        } else if(mes=meshoy){
+            if(dia>diahoy){
+                alert("Eres menor de edad por "+ -(diahoy-dia)+ " dia/dias." );
+                campo.focus();
+                campo.select();
+                return true; 
+            }
+        }
+    }
+
+    return false;
+
+}
