@@ -86,3 +86,82 @@ header a{
     color: rgb(104, 103, 103);
 
 }
+
+
+
+/* PAGINA PRINCIPAL DE ELECCION DE COCHES*/
+
+.button{
+    font-size: 14;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.page-nav{
+    border: 1px solid rgb(92, 13, 13);
+}
+.page-nav h1{
+    margin: 20px;
+}
+
+.button-checkout{
+    background-color: rgb(255, 251, 251);
+    color: black;
+    transition-duration: 0.2s;
+    bottom: 10px;
+    position:initial;
+
+}
+
+.page-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+   
+
+}
+.product-container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+.product-container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+.product-container{
+    margin-left: 15px;
+    padding: 2px 16px;
+    position: relative;
+    box-shadow: rgb(255, 255, 255);
+
+    
+}
+
+.product-container img{
+    width: 300px;
+    
+}
+
+.product-container h1{
+    margin-bottom: 0px;
+    margin-left: 0%;
+}
+
+.button-add {
+    
+    background-color: rgb(255, 251, 251);
+    color: black;
+    transition-duration: 0.2s;
+    bottom: 10px;
+
+  }
+
+  .button-checkout:hover {
+    background-color: #5cc8f3;
+    color: white;
+  }
+  
+.button-add:hover {
+    background-color: #b98460; /* Green */
+    color: white;
+  }

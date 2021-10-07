@@ -5,12 +5,74 @@
     <meta  charset="utf-8">
     <title>PaginaPrincipal</title>
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts.js"></script>
 </head>
 
 
 <body>
-    <h1>hola</h1>
+   
+    <header>
+        <a href="index.html">Concesionario Gajo</a>
+    </header> 
+
+
+    <div class="page-nav">
+        <h1>Compra tu coche de forma sencilla</h1>
+        <button id="checkout"class="button-checkout" onclick="pay()"></button>
+    </div>
+  
+  
+    <div class="page-content">
+
+
+     <div class="product-container">
+          <h3>Ford mustang</h3>
+          <img src="Imagenes/mustang png">
+          <h1>50000$</h1>
+          <button class="button-add" onclick="add('mustang', 50000)">Comprar</button>
+      </div>
+
+
+     <div class="product-container">
+        <h3>Porsche 911</h3>
+        <img src="Imagenes/Porsche.png">
+        <h1>95000$</h1>
+        <button class="button-add" onclick="add('Porsche', 95000)" >Comprar</button>
+     </div>
+
+     <div class="product-container">
+        <h3>Porsche Cayenne</h3>
+        <img src="Imagenes/cayenne.png">
+        <h1>39000$</h1>
+        <button class="button-add" onclick="add('cayenne', 39000)" >Comprar</button>
+     </div>
+
+     <div class="product-container">
+        <h3>Golf GTI</h3>
+        <img src="Imagenes/golf.png">
+        <h1>28000$</h1>
+        <button class="button-add" onclick="add('golf', 28000)" >Comprar</button>
+     </div>
+
+     <div class="product-container">
+        <h3>Lamborghini Huracán</h3>
+        <img src="Imagenes/lamborghini.png">
+        <h1>190000$</h1>
+        <button class="button-add" onclick="add('lamborghini', 190000)">Comprar</button>
+     </div>
+
+     <div class="product-container">
+        <h3>BMW serie 2</h3>
+        <img src="Imagenes/bwm.png">
+        <h1>49000$</h1>
+        <button class="button-add" onclick="add('bwm', 49000)" >Comprar</button>
+     </div>
+
+
+    </div>
+
 
 
 </body>
