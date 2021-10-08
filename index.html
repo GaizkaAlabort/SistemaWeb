@@ -8,23 +8,75 @@
     <title>ConcesionarioGajo</title>
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    
 </head>
 
-
-
-
 <body>
-
     <header>
         <a href="index.html">Concesionario Gajo</a>
     </header>
-
+    
+        
+    </div>
    <section>
        <h2 id="text"><span>Concesionario</span><br>GaJo</h2>
+       <div>
+           <image class="imagenPrincilal" src="Imagenes/principa.jpg" width="1920" height="1080"></image>
+           <div>
+                 <div class="IdReg">
+                  <a href="login.html">Identificate</a> o
+                  <a href="singup.html">Registrate</a>
+
+                 </div>
+           </div>
+       </div>
        
-   </section>
-    <a href="login.html">Identificate</a> o
-    <a href="singup.html">Registrate</a>
+   
+    </section>
+
+    <h2>Alquila tu coche de forma sencilla</h2>
+   
+        <div class="container" >
+
+            <div class="image-container" > 
+                <div class="image"><img src="Imagenes/1.jpg" ></div>
+                <div class="image"><img src="Imagenes/2.jpg" ></div>
+                <div class="image"><img src="Imagenes/3.jpg" ></div>
+                <div class="image"><img src="Imagenes/4.jpg" ></div>
+                <div class="image"><img src="Imagenes/5.jpg" ></div>
+                <div class="image"><img src="Imagenes/6.jpg" ></div>
+                <div class="image"><img src="Imagenes/7.jpg" ></div>
+                <div class="image"><img src="Imagenes/8.jpg" ></div>
+            </div>
+
+            <div class="popup-image">
+                <span>&times;</span>
+                <img src="Imagenes/1.jpg" alt="">
+               
+               <div class="formularioCoches">
+                   
+                   Fecha de inicio: <input type="date" name="FechaInicio">
+                   Fecha de fin: <input type="date" name="FechaInicio">
+                    <submit class="botonAlquilar">Alquilar</button>
+            
+                </div> 
+                
+            </div>
+        
+        </div>
+
+<script>
+    document.querySelectorAll('.image-container img').forEach(image =>{
+        image.onclick = () =>{
+            document.querySelector('.popup-image').style.display = 'block';
+            document.querySelector('.popup-image img').src = image.getAttribute('src');
+        }
+
+    });
+    document.querySelector('.popup-image span').onclick = () =>{
+        document.querySelector('.popup-image').style.display = 'none';
+    }
+</script>
     
 </body>
 </html>

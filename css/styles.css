@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Gemunu+Libre:wght@800&display=swap');
+
+
 body {
     overflow-x:hidden;
     background:rgb(182, 182, 182);
@@ -9,7 +15,9 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
     font-weight: 10;
-}
+    box-sizing: border-box;
+    
+}   
 section{
     position: relative;
     width: 100%;
@@ -19,6 +27,25 @@ section{
     align-items: center;
 
 }
+
+/* Inicio */
+
+
+
+.IdReg{
+    outline: none;
+    bottom: 1%;
+    left: 50%;
+    top: 110%;
+    font-size: 24px;
+    background-color: teal;
+}
+section .InformacionPrincipal{
+    position: absolute;
+    background-color: #fff;
+    top: 10%;
+}
+
 section #text{
     position :absolute;
     color:rgb(0, 0, 143);
@@ -27,6 +54,7 @@ section #text{
     line-height: 0,30em;
     letter-spacing: 5px;
     font-family: 'Staatliches', cursive;
+    top: 10%;
 }
 
 section #text span{
@@ -36,6 +64,40 @@ section #text span{
     font-family: 'Roboto Condensed', sans-serif;
 
 }
+ 
+
+/*  Registro y login */
+
+
+
+section .ImagenLogin{
+    width: 95%;
+    max-width: 600px;
+    margin: 100px auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+.formularioLogin{
+        text-align: center;
+        position: absolute;
+
+}
+
+.Identificate{
+    text-align: center;
+    position: absolute;
+    font-size: 45px;
+    color: aliceblue;
+    font-family: 'Alfa Slab One', cursive;
+    bottom: 147%;
+    
+   
+}
+
+
 input[type="text"], input[type="password"], input[type="tel"],input[type="DNI"]{
 
     outline: none;
@@ -70,20 +132,25 @@ input[type="submit"]{
 }
 
 
+/* Parte de arriba */
+
 input[type="submit"]:hover{
-    background-color: #00858a;
+    background-color: #4b4b4b8a;
 }
+
 header {
-    border-bottom: 2px solid rgb(199, 198, 198);
-    padding: 20px ;
+    border-bottom: 2px solid rgba(199, 198, 198, 0.411);
+    padding: 12px ;
     margin-bottom: 10px;
     width: 100%;
     text-align:center;
-
+    background-color: rgb(88, 88, 88);
 }
+
 header a{
     text-decoration: none ;
-    color: rgb(104, 103, 103);
+    color: rgb(206, 236, 248);
+    font-family: 'Alfa Slab One', cursive;
 
 }
 
@@ -91,77 +158,99 @@ header a{
 
 /* PAGINA PRINCIPAL DE ELECCION DE COCHES*/
 
-.button{
-    font-size: 14;
+h2{
     text-align: center;
-    border-radius: 8px;
-    padding: 10px 20px;
+    font-size: 45px;
+    color: rgb(44, 44, 44);
+    font-family: 'Alfa Slab One';
+    bottom: 147%;
+    
+}
+.container{
+   position: relative;
+    min-height: 100vh;
 }
 
-.page-nav{
-    border: 1px solid rgb(92, 13, 13);
-}
-.page-nav h1{
-    margin: 20px;
-}
-
-.button-checkout{
-    background-color: rgb(255, 251, 251);
-    color: black;
-    transition-duration: 0.2s;
-    bottom: 10px;
-    position:initial;
-
-}
-
-.page-content{
+.container .image-container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-   
-
-}
-.product-container:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-
-.product-container:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-.product-container{
-    margin-left: 15px;
-    padding: 2px 16px;
-    position: relative;
-    box-shadow: rgb(255, 255, 255);
-
-    
+    gap : 15px;
+    justify-content: center;
+    padding: 10px;
 }
 
-.product-container img{
-    width: 300px;
-    
+.container .image-container .image{
+    height: 250px;
+    width: 350px;
+    border: 10px solid #fff;
+    box-shadow: 0 5px 15 rgba(0, 0, 0, .1);
+    overflow: hidden;
+    cursor: pointer;
 }
 
-.product-container h1{
-    margin-bottom: 0px;
-    margin-left: 0%;
+.container .image-container .image img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: .2s linear;
 }
 
-.button-add {
-    
-    background-color: rgb(255, 251, 251);
-    color: black;
-    transition-duration: 0.2s;
-    bottom: 10px;
+.container .image-container .image:hover img{
+transform: scale(1,1.10);
+}
 
-  }
+.container .popup-image{
+    position: fixed;
+    top: 0; left: 0;
+    background: rgba(105, 105, 105, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+.container .popup-image span{
+    position: absolute;
+    top: 0; right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    cursor: pointer;
+    z-index: 100;
+}
+.container .popup-image img{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50% , -50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+}
+@media(max-width: 768px){
+    .container .popup-image img{
+        width: 95%;
+    }
+}
 
-  .button-checkout:hover {
-    background-color: #5cc8f3;
-    color: white;
-  }
-  
-.button-add:hover {
-    background-color: #b98460; /* Green */
-    color: white;
-  }
+input[type="date"]{
+    outline: none;
+    padding: 10px;
+    display: block;
+    width: 100px;
+    border-radius: 3px;
+    border : 1 px solid rgb(6, 3, 255);
+    margin: 10px auto;
+    background: rgb(255, 255, 255);
+}
+
+.container .botonAlquilar{
+    padding: 4px;
+    color: #fff;
+    background: #2cbcff;
+    width: 200px;
+    margin: 20px auto;
+    margin-top: 5%;
+    border-radius: 0%;
+    border: 0;
+    cursor: pointer;
+    font-size: 110%;
+}
