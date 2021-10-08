@@ -6,7 +6,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Gemunu+Libre:wght@800&display=swap');
 
-
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&display=swap');
 body {
     overflow-x:hidden;
     background:rgb(182, 182, 182);
@@ -253,4 +253,21 @@ input[type="date"]{
     border: 0;
     cursor: pointer;
     font-size: 110%;
+}
+h3{
+    position: absolute;
+    font-family: 'Alfa Slab One';
+    font-size: 300%;
+    bottom: 19%; left: 38%;
+}
+
+
+
+
+h4{
+    position: absolute;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 110%;
+    bottom: 0%; left: 1%;
+    margin: 5%;
 }
