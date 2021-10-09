@@ -2,6 +2,8 @@
 function validarRegistro(){
     if(malEmail(document.registro.email)) return;
     if(malNombre(document.registro.nombre)) return;
+    if(vacio(document.registro.apellidos)) return;
+    if(vacio(document.registro.contraseña)) return;
     if(malTLF(document.registro.telefono)) return;
     if(malDNI(document.registro.dni)) return;
     if(malFecha(document.registro.FechaNacimiento)) return;
@@ -14,6 +16,19 @@ function validarIdentificacion(){
     
 
     document.identificacion.submit()
+}
+
+function vacio(campo)
+{
+    texto=campo.value;
+
+    if (texto.length < 1) {
+        alert("Tienes que completar todos los campos.");
+        campo.focus();
+        campo.select();
+        return true;
+    }
+    return false;
 }
 
 function malEmail(campo){
