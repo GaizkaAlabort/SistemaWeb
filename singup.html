@@ -19,7 +19,7 @@
     <h1>Registrate</h1>
 
 
-    <form name="registro" action="login.html">
+    <form name="registro" action="registrarse.php" method="post">
         <input type="text" name="email" placeholder="Introduce email" required>
         <input type="text" name="nombre" placeholder="Introduce tu nombre" required>
         <input type="text" name="apellidos" placeholder="Introduce tus apellidos" required>
@@ -28,7 +28,7 @@
         <input type="text" name="dni" placeholder="Introduce DNI" required>
         Fecha de nacimiento: <input type="date" name="FechaNacimiento" required>
         <br></br>
-        <input type="button" value="Enviar" onclick="validarRegistro()">
+        <input type="button" value="Enviar" onclick="validarRegistro()" href="login.html">
     </form>
 
 <span>o <a href="login.html">Identificate</a></span>
