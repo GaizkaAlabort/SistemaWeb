@@ -37,48 +37,6 @@
     if(!$resultado){
         echo"Hubo Algun Error";
     }else{
-        echo"Te has registrado Correctamente<br>";
+        echo"<script>alert('Se ha registrado correctamente'); window.location='login.html'</script>";
     }
 ?>
-
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-    <meta  charset="utf-8">
-    <title>Identificaci&oacute;n</title>
-    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-   
-<body>
-    
-     <header>
-        <a href="index.html">Concesionario Gajo</a>
-    </header> 
-   
-    <section>
-        <div>
-            
-            </div class="ImagenLogin">
-               
-                <image src="Imagenes/Imagen login.jpg" width="1920" height="1080" ></image>
-                
-                <div class="formularioLogin">
-                    <div class="Identificate"><h1 >Identificate</h1></div>
-                    
-                    <form action="PaginaEleccionDeCoches.html" method="POST">
-                        <input type="text" name="email" placeholder="Introduce email" pattern="[_a-z0-9-]+(.[_a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)(.[a-z]{2,3})"required>
-                        <input type="password" name="password" placeholder="Introduce la contraseña"required>
-                     <a href="PaginaEleccionDeCoches.html"><input type="submit" value="Enviar"></a>
-                     </form>
-                     
-            </div>
-         </div> 
-        <div>
-    </section>
-    <span>o <a href="singup.html">Registrate</a></span>
-</body>
-</html>
-
