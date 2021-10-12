@@ -41,4 +41,7 @@
 
     
 ?>
+<html>
+<a href="modificarCoche.html"><input type="submit" value="Modificar coche"></a>
+</html>
 
