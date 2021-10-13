@@ -8,6 +8,7 @@
     <title>Identificaci&oacute;n</title>
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="main.js"></script>
 </head>
    
 <body>
@@ -26,10 +27,10 @@
                 <div class="formularioLogin">
                     <div class="Identificate"><h1 >Identificate</h1></div>
                     
-                    <form action="options.html" method="POST">
-                        <input type="text" name="email" placeholder="Introduce email" pattern="[_a-z0-9-]+(.[_a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)(.[a-z]{2,3})"required>
+                    <form name="identificacion" action="logearse.php" method="POST">
+                        <input type="text" name="email" placeholder="Introduce email" required>
                         <input type="password" name="password" placeholder="Introduce la contraseña"required>
-                     <a href="options.html"><input type="submit" value="Enviar"></a>
+                        <input type="button" value="Enviar" onclick="validarIdentificacion()" href="options.html">
                      </form>
                      
             </div>

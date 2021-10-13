@@ -2,7 +2,7 @@
 function validarRegistro(){
     if(malEmail(document.registro.email)) return;
     if(malNombre(document.registro.nombre)) return;
-    if(vacio(document.registro.apellidos)) return;
+    if(malApellido(document.registro.apellidos)) return;
     if(vacio(document.registro.contraseña)) return;
     if(malTLF(document.registro.telefono)) return;
     if(malDNI(document.registro.dni)) return;
@@ -13,7 +13,7 @@ function validarRegistro(){
 
 function validarIdentificacion(){
     if(malEmail(document.identificacion.email)) return;
-    
+    if(vacio(document.identificacion.password)) return;
 
     document.identificacion.submit()
 }
@@ -48,6 +48,18 @@ function malNombre(campo){
 
     if(!nombre.test(campo.value)){
         alert("El nombre " + campo.value + " es incorrecto.");
+        campo.focus();
+        campo.select();
+        return true;
+    }
+    return false;
+}
+
+function malApellido(campo){
+    var apellido=/^[A-Z][a-z]+/;
+
+    if(!apellido.test(campo.value)){
+        alert("El apellido " + campo.value + " es incorrecto.");
         campo.focus();
         campo.select();
         return true;
