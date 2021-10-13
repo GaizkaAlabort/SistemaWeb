@@ -5,17 +5,13 @@
     $host="localhost";
     $dataBase="SistemaWeb";
     
-    $connection = @mysqli_connect($host, $user, $pass, $dataBase);
-    
-    if($connection->connect_error){
-    die("Datanase connection failed: " . $conn->coonect_error);
-}
+    $connection = mysqli_connect($host,$user,$pass,$dataBase);
+    if ($connection->connect_error) {
+        die("Database connection failed: " . $connection->connect_error);
+    }
 
-$query= mysqli_query($connection, "SELECT * FROM tablaCoches")
-    or die(mysqli_error($connection));
+    $query= mysqli_query($connection, "SELECT * FROM tablaCoches") or die(mysqli_error($connection));
 ?>
-
-
 
 
 <html>
@@ -55,7 +51,6 @@ $query= mysqli_query($connection, "SELECT * FROM tablaCoches")
 
 <a href="index.html"><input type="submit" value="Volver al menu"></a><br>
 <b href="elegirCocheParaEditar.html"><input type="submit" value="Identifica el coche que quieras para poder modificarlo"></b>
-   
 
 </html>
 
