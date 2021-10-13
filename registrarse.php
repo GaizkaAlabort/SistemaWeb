@@ -29,14 +29,24 @@
     $telefono = $_POST["telefono"];
     $DNI = $_POST["dni"];
     $fecha = $_POST["FechaNacimiento"];
-    
-    $instruccion_SQL="INSERT INTO tabla (email, nombre, apellidos, contraseña, telefono, DNI, fecha) VALUES ('$email','$nombre','$apellidos','$password','$telefono','$DNI','$fecha')";
 
-    $resultado = mysqli_query($connection, $instruccion_SQL);
+    $comprobacion_SQL="SELECT email FROM tabla WHERE email='$email'";
 
-    if(!$resultado){
-        echo"Hubo Algun Error";
-    }else{
-        echo"<script>alert('Se ha registrado correctamente'); window.location='login.html'</script>";
+    $resultadoComprobacion = mysqli_query($connection, $comprobacion_SQL);
+
+    if($resultadoComprobacion->num_rows== 0){
+        
+        $resultadoComprobacion->close();
+        $instruccion_SQL="INSERT INTO tabla (email, nombre, apellidos, contraseña, telefono, DNI, fecha) VALUES ('$email','$nombre','$apellidos','$password','$telefono','$DNI','$fecha')";
+
+        $resultado = mysqli_query($connection, $instruccion_SQL);
+        
+        if(!$resultado){
+            echo"Hubo Algun Error";
+        }else{
+            echo"<script>alert('Se ha registrado correctamente'); window.location='login.html'</script>";
+        }
+    } else {
+        echo"<script>alert('Cuenta ya registrada en la web'); window.location='login.html'</script>";
     }
 ?>
