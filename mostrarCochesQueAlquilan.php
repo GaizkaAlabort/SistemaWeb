@@ -1,4 +1,5 @@
 <?php 
+ echo "<link rel=stylesheet href=css/styles.css>";
     $user = "root";
     $pass="123456";
     $host="localhost";
@@ -14,30 +15,52 @@ $query= mysqli_query($connection, "SELECT * FROM tablaCoches")
     or die(mysqli_error($connection));
 ?>
 
-<table class="table table-striped">
-  	
-		<thead>
-		<tr>
-			<th>Marca</th>
-			<th>Modelo</th>
-			<th>Caballos</th>
-			<th>Matricula</th>
-			<th>Telefono</th>
-		</tr>
-		</thead>
 
-<?php
+
+
+<html>
+
+
+
+        <table class="table">
+  		
+		    <tr class="tablaMostrarCoches">
+			    <th>Marca</th>
+			    <th>Modelo</th>
+			    <th>Caballos</th>
+			    <th>Matricula</th>
+			    <th>Telefono</th>
+	        </tr>
+
+
+
+            <?php
+
     while($row = mysqli_fetch_array($query)){
         echo
-        "<tr>
-        <br></br><td>{$row["marca"]}</td>
-        <br></br><td>{$row["modelo"]}</td>
-        <br></br><td>{$row["caballos"]}</td>
-        <br></br><td>{$row["matricula"]}</td>
-        <br></br> <td>{$row["telefono"]}</td>
-        </td>";
+        "
+        <div = modificarTabla> 
+        <tr>
+        <td>{$row["marca"]}</td>
+       <td>{$row["modelo"]}</td>
+       <td>{$row["caballos"]}</td>
+        <td>{$row["matricula"]}</td>
+        <td>{$row["telefono"]}</td>
+        </tr>
+        </div>"
+        ;
     }
+    
 ?>
-<html>
-<a href="index.html"><input type="submit" value="Volver al menu"></a>
+
+<a href="index.html"><input type="submit" value="Volver al menu"></a><br>
+<b href="elegirCocheParaEditar.html"><input type="submit" value="Identifica el coche que quieras para poder modificarlo"></b>
+   
+
 </html>
+
+
+
+
+
+
