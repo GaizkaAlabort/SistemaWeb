@@ -1,8 +1,8 @@
 <?php 
-    $user = "root";
-    $pass="123456";
-    $host="localhost";
-    $dataBase="SistemaWeb";
+    $user = "admin";
+    $pass="test";
+    $host="db";
+    $dataBase="database";
     
     $connection = mysqli_connect($host,$user,$pass,$dataBase);
     if ($connection->connect_error) {
@@ -23,7 +23,7 @@
     if(!$resultado){
         echo"Hubo Algun Error";
     }else{
-        echo"Te has registrado Correctamente<br>";
+        echo"<script>alert('Se ha registrado correctamente'); window.location='index.html'</script>";
     }
 
     
