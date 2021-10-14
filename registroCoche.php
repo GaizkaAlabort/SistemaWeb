@@ -4,22 +4,9 @@
     $host="localhost";
     $dataBase="SistemaWeb";
     
-    $connection = @mysqli_connect($host, $user, $pass, $dataBase);
-    
-    if(!$connection){
-        echo "No se ha podido conectar"; 
-    }else{
-        $datab = "SistemaWeb";
-        $db = mysqli_select_db($connection,$datab);
-    
-        if(!$db){
-    
-            echo "No se ha podido encontrar la tabla";
-        }
-        else{
-            echo"<title>Confirmacion</title>
-            <h3>Tabla seleccionada: </h3>";
-        }
+    $connection = mysqli_connect($host,$user,$pass,$dataBase);
+    if ($connection->connect_error) {
+        die("Database connection failed: " . $connection->connect_error);
     }
     
     $marca = $_POST["marca"];
@@ -31,7 +18,7 @@
     
     $instruccion_SQL="INSERT INTO tablacoches (marca, modelo, caballos, matricula, telefono) VALUES ('$marca','$modelo','$caballos','$matricula','$telefono')";
 
-    $resultado = mysqli_query($connection, $instruccion_SQL);
+    $resultado = mysqli_query($connection, $instruccion_SQL) or die (mysqli_error($connection));
 
     if(!$resultado){
         echo"Hubo Algun Error";

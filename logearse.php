@@ -6,13 +6,9 @@
     $host="localhost";
     $dataBase="SistemaWeb";
     
-    $connection = @mysqli_connect($host, $user, $pass, $dataBase);
-    
-    if(!$connection){
-        echo "No se ha podido conectar"; 
-    }else{
-        $datab = "SistemaWeb";
-        $db = mysqli_select_db($connection,$datab);
+    $connection = mysqli_connect($host,$user,$pass,$dataBase);
+    if ($connection->connect_error) {
+        die("Database connection failed: " . $connection->connect_error);
     }
     
     $email = $_POST["email"];
@@ -20,7 +16,7 @@
     
     $instruccion_SQL="SELECT * FROM tabla WHERE email='$email'";
 
-    $resultado = mysqli_query($connection, $instruccion_SQL);
+    $resultado = mysqli_query($connection, $instruccion_SQL) or die (mysqli_error($connection));
     
     $row= mysqli_fetch_array($resultado);
     
