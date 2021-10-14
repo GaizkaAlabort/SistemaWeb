@@ -7,6 +7,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Gemunu+Libre:wght@800&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&display=swap');
+
 body {
     overflow-x:hidden;
     background:rgb(182, 182, 182);
@@ -64,6 +67,19 @@ section #text span{
     font-family: 'Roboto Condensed', sans-serif;
 
 }
+
+.identificate {
+    transition-duration: 0.4s;
+    text-decoration: none;
+   
+  }
+  
+.identificate:hover {
+    background-color:rgba(129, 0, 129, 0.322);
+    color: white;
+    border-radius: 10px;
+
+  }
  
 
 /*  Registro y login */
@@ -156,6 +172,12 @@ input[type="submit"], input[type="button"]{
     cursor: pointer;
 }
 
+ .identificarCocheBoton{
+    
+    color: #fff;
+    background: #2cbcff;
+    width: 25vw;
+}
 
 /* Parte de arriba */
 
@@ -180,18 +202,20 @@ input[type="date"]{
 
 header {
     border-bottom: 2px solid rgba(199, 198, 198, 0.411);
-    padding: 12px ;
+    padding: 0px ;
     margin-bottom: 10px;
     width: 100%;
     text-align:center;
     background-color: rgb(88, 88, 88);
+    margin-right: 10px;
+    font-size: 1.75vw ;
 }
 
 header a{
     text-decoration: none ;
     color: rgb(206, 236, 248);
     font-family: 'Alfa Slab One', cursive;
-
+    
 }
 
 
@@ -200,9 +224,11 @@ header a{
 h2{
     text-align: center;
     font-size: 45px;
-    color: rgb(44, 44, 44);
+    color: rgba(255, 255, 255, 0.938);
     font-family: 'Alfa Slab One';
     bottom: 147%;
+    -webkit-text-stroke: 1px black;
+    
     
 }
 .container{
@@ -283,11 +309,11 @@ transform: scale(1,1.10);
     font-size: 110%;
 }
 h3{
-    position:center;
-    font-family: 'Alfa Slab One', cursive;
+    position : absolute;
+    font-family: 'Gemunu Libre', sans-serif;
     background-color:teal;
-    font-size: 100%;
-    bottom: 1%; left: 40%;
+    font-size: 150%;
+    bottom: 20%; left: 40%;
     padding: 1%;
     margin: 0%;
 }
@@ -300,6 +326,11 @@ h4{
     margin: 5%;
 }
 
+
+section .modificarUsuario{
+
+
+}
 
 /* registra tu coche*/
 
@@ -327,9 +358,9 @@ input[type="numer"]{
 h5{
     
     position:center;
-    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Gemunu Libre', sans-serif;
     background-color:teal;
-    font-size: 100%;
+    font-size: 150%;
     bottom: 1%; left: 40%;
     padding: 1%;
     margin: 0%;
@@ -341,12 +372,33 @@ h5{
     text-align: center;
     font-size: 45px;
     color: rgb(207, 204, 204);
-    font-family: 'Alfa Slab One';
+    font-family: 'Gemunu Libre', sans-serif;
     bottom: 147%;
     
 }
 
-.table-table-striped{
+.tabla{
     margin: auto;
-}
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Gemunu Libre', sans-serif; ;
 
+}
+.tabla th{
+    border: 1px solid #dddddd;
+    background-color: #2cbcff;
+    text-align: center;
+    font-size: 2vw;
+    padding: 8px;
+  }
+.tabla td{
+    border: 1px solid #dddddd;
+    text-align: center;
+    font-size: 1.25vw;
+    padding: 8px;
+  }
+   .tabla tr:nth-child(even) {
+    background-color: #dddddd;
+  }

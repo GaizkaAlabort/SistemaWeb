@@ -1,9 +1,14 @@
 <?php 
  echo "<link rel=stylesheet href=css/styles.css>";
-    $user = "admin";
-    $pass="test";
-    $host="db";
+    $user = "root";
+    $pass="123456";
+    $host="localhost";
     $dataBase="database";
+    
+    #para docker utilizar: 
+    #$user = "admin";
+    #$pass="test";
+    #$host="db";
     
     $connection = mysqli_connect($host,$user,$pass,$dataBase);
     if ($connection->connect_error) {
@@ -15,10 +20,12 @@
 
 
 <html>
+<body>
+    
 
 
 
-        <table class="table">
+        <table class="tabla">
   		
 		    <tr class="tablaMostrarCoches">
 			    <th>Marca</th>
@@ -33,25 +40,27 @@
             <?php
 
     while($row = mysqli_fetch_array($query)){
-        echo
-        "
-        <div = modificarTabla> 
+    ?>
+
+       
         <tr>
-        <td>{$row["marca"]}</td>
-       <td>{$row["modelo"]}</td>
-       <td>{$row["caballos"]}</td>
-        <td>{$row["matricula"]}</td>
-        <td>{$row["telefono"]}</td>
-        </tr>
-        </div>"
-        ;
+             <td> <?php echo $row["marca"]?> </td>
+             <td> <?php echo $row["modelo"]?> </td>
+             <td> <?php echo $row["caballos"]?> </td>
+             <td> <?php echo $row["matricula"]?> </td>
+             <td> <?php echo $row["telefono"]?> </td>
+   
+             </tr>
+    
+<?php
     }
     
 ?>
+</table>
 
 <a href="index.html"><input type="submit" value="Volver al menu"></a><br>
-<b href="elegirCocheParaEditar.html"><input type="submit" value="Identifica el coche que quieras para poder modificarlo"></b>
-
+<a href="elegirCocheParaEditar.html"><input type="submit" value="Modificar coche"></a>
+</body>
 </html>
 
 
