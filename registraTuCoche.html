@@ -7,7 +7,7 @@
     <title>AlquilaTuCoche</title>
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="registroCoche.js"></script>
 
 </head>
 <body>
@@ -25,14 +25,12 @@
                 <div class="formularioRegistro">
                     <div class="RegistraCoche"><h1>Introduce los datos de tu coche</h1></div>
                         <form name="registro" action="registroCoche.php" method="post">
-                            <input type="text" name="marca" placeholder="Introduce La marca " required>
-                            <input type="text" name="modelo" placeholder="Introduce el modelo del coche" required>
-                            <input type="text" name="caballos" placeholder="Introduce el n&uacute;mero de caballos" required>
-                            <input type="text" name="matricula" placeholder="Introduce la matricula" required>
-                            <input type="text" name="telefono" placeholder="Introduce tel&eacute;fono" required>
-                            
-                            
-                            <input type="submit" value="Enviar" href="login.html" >
+                            <input type="text" name="marca" placeholder="Introduce La marca ">
+                            <input type="text" name="modelo" placeholder="Introduce el modelo del coche">
+                            <input type="text" name="caballos" placeholder="Introduce el n&uacute;mero de caballos">
+                            <input type="text" name="matricula" placeholder="Introduce la matricula">
+                            <input type="text" name="telefono" placeholder="Introduce tel&eacute;fono">
+                            <input type="button" value="Enviar" onclick="validarRegistroCoches()">
                         </form>
 
             </div>
