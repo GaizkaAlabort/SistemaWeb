@@ -7,6 +7,7 @@
     <title>Identificaci&oacute;n coche</title>
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="registroCoche.js"></script>
 </head>
    
 <body>
@@ -25,15 +26,14 @@
                 <div class="formularioLogin">
                     <div class="Identificate"><h1 >Identifica tu coche</h1></div>
                     
-                    <form action="modificarCoche.html" method="POST">
-                        <input type="text" name="matricula" placeholder="Introduce la matricula del coche"required>
-                     <a href="modificarCoche.html"><input type="submit" value="Modificar el coche"></a>
-                     </form>
+                    <form name="identificacion" action="modificarCoche.html" method="POST">
+                        <input type="text" name="matricula" placeholder="Introduce la matricula del coche" id="matmodificar">
+                        <input type="button" value="Enviar" onclick="validarIdentificacion()" href="modificarCoche.html">
+                    </form>
                      
             </div>
          </div> 
         <div>
     </section>
-    <span>o <a href="modificarCoche.html">Modificar tu coche</a> </span>
 </body>
 </html>
