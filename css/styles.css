@@ -81,7 +81,66 @@ section #text span{
 
   }
  
-
+/* Footer */
+.footer-basic {
+    padding:10px 0;
+    background-color:#3a3a3a73;
+    color:#dfdfdf;
+  }
+  
+  .footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  
+  .footer-basic li {
+    padding:0 10px;
+  }
+  
+  .footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid rgb(255, 255, 255);
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:rgba(255, 255, 255, 0.274);
+    margin-bottom:0;
+  }
 /*  Registro y login */
 
 section .ImagenLogin{
@@ -221,6 +280,11 @@ header a{
 
 /* PAGINA PRINCIPAL DE ELECCION DE COCHES*/
 
+.Identificate .h1{
+    position:center;
+}
+
+
 h2{
     text-align: center;
     font-size: 45px;
@@ -309,13 +373,12 @@ transform: scale(1,1.10);
     font-size: 110%;
 }
 h3{
-    position : absolute;
+    position : center;
     font-family: 'Gemunu Libre', sans-serif;
     background-color:teal;
     font-size: 150%;
-    bottom: 20%; left: 40%;
-    padding: 1%;
-    margin: 0%;
+    padding: 0.15%;
+    margin: 1%;
 }
 
 h4{
@@ -327,10 +390,7 @@ h4{
 }
 
 
-section .modificarUsuario{
 
-
-}
 
 /* registra tu coche*/
 
