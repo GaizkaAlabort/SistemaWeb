@@ -1,3 +1,4 @@
+var correoUsuario;
 
 function validarRegistro(){
     if(malEmail(document.registro.email)) return;
@@ -13,6 +14,7 @@ function validarRegistro(){
 
 function validarIdentificacion(){
     if(malEmail(document.identificacion.email)) return;
+    correoUsuario=document.getElementById("emailusuario").value;
     if(vacio(document.identificacion.password)) return;
 
     document.identificacion.submit()
@@ -44,7 +46,7 @@ function malEmail(campo){
 }
 
 function malNombre(campo){
-    var nombre=/^[A-Z][a-z]+/;
+    var nombre=/^[A-Za-z][a-z]+/;
 
     if(!nombre.test(campo.value)){
         alert("El nombre " + campo.value + " es incorrecto.");
@@ -56,7 +58,7 @@ function malNombre(campo){
 }
 
 function malApellido(campo){
-    var apellido=/^[A-Z][a-z]+/;
+    var apellido=/^[A-Za-z][a-z]+/;
 
     if(!apellido.test(campo.value)){
         alert("El apellido " + campo.value + " es incorrecto.");
@@ -194,7 +196,7 @@ function malFecha(campo){
     var comprobacion=new Date(año, mes, 0);
     var comprobacionDia=comprobacion.getDate();
 
-    if(!fecha.test(campo.value) || añohoy-año<0 || dia>comprobacionDia){
+    if(!fecha.test(campo.value) || añohoy-año<0 || dia>comprobacionDia || añohoy-año>111){
         alert("La fecha de nacimiento " + campo.value + " es incorrecta.");
         campo.focus();
         campo.select();
