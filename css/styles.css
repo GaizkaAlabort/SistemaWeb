@@ -80,7 +80,7 @@ section #text span{
 .identificate {
     transition-duration: 0.4s;
     text-decoration: none;
-   
+   font-size: 25px;
   }
   
 .identificate:hover {
@@ -293,8 +293,13 @@ header a{
 
 /* PAGINA PRINCIPAL DE ELECCION DE COCHES*/
 
+
+h1{
+    position: relative;
+    right:5%;
+}
 .Identificate .h1{
-    position:center;
+    text-align:center;
 }
 
 
