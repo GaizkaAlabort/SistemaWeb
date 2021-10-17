@@ -41,8 +41,17 @@ section{
     left: 50%;
     top: 110%;
     font-size: 24px;
-    background-color: teal;
+    background: teal;
 }
+
+.referencias{
+    display: flex;
+    position:relative;
+    left: 26.8%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
 section .InformacionPrincipal{
     position: absolute;
     background-color: #fff;
@@ -80,6 +89,10 @@ section #text span{
     border-radius: 10px;
 
   }
+
+.botonAlquilar{
+    bottom: 10%;
+}
  
 /* Footer */
 .footer-basic {
@@ -379,6 +392,7 @@ h3{
     font-size: 150%;
     padding: 0.15%;
     margin: 1%;
+    
 }
 
 h4{
@@ -426,6 +440,10 @@ h5{
     margin: 0%;
 }
 
+h6{
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 24px;
+}
 
 
 .modificarCoche h6{
