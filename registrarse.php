@@ -1,3 +1,5 @@
+<title>Cargando</title>
+
 <?php 
     $user = "root";
     $pass="";
