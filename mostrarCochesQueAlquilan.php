@@ -1,9 +1,9 @@
 <?php 
  echo "<link rel=stylesheet href=css/styles.css>";
     $user = "root";
-    $pass="123456";
+    $pass="";
     $host="localhost";
-    $dataBase="database";
+    $dataBase="SistemaWeb";
     
     #para docker utilizar: 
     #$user = "admin";

@@ -4,16 +4,14 @@ function validarRegistroCoches(){
     if(vacio(document.registro.marca)) return;
     if(vacio(document.registro.modelo)) return;
     if(malnum(document.registro.caballos)) return;
-    if(vacio(document.registro.matricula)) return;
-    //if(malmatricula(document.registro.matricula)) return;
+    if(malmatricula(document.registro.matricula)) return;
     if(malTLF(document.registro.telefono)) return;
 
     document.registro.submit()
 }
 
 function validarIdentificacion(){
-    if(vacio(document.identificacion.matricula)) return;
-    //if(malmatricula(document.identificacion.matricula)) return;
+    if(malmatricula(document.identificacion.matricula)) return;
     matriculaModificar=document.getElementById("matmodificar").value;
 
     document.identificacion.submit()
@@ -52,7 +50,7 @@ function malnum(campo){
 }
 
 function malmatricula(campo){
-    var matricula=/^[0-9]{4}[A-Za-Z]{3}$/;
+    var matricula=/^[0-9]{4}[A-Z]{3}$/;
 
     if(!matricula.test(campo.value)){
         alert("La matricula " + campo.value + " es incorrecta o es un vehiculo especial.");
