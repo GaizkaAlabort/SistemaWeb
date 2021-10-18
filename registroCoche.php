@@ -1,3 +1,5 @@
+<title>Cargando</title>
+
 <?php 
     $user = "root";
     $pass="";
@@ -18,8 +20,12 @@
     
     $instruccion_SQL="INSERT INTO tablacoches (marca, modelo, caballos, matricula, telefono) VALUES ('$marca','$modelo','$caballos','$matricula','$telefono')";
 
-    $resultado = mysqli_query($connection, $instruccion_SQL) or die (mysqli_error($connection));
+    if (!mysqli_query($connection, $instruccion_SQL)) {
+        echo"<script>alert('Comprueba lo que has escrito. Puede que te hayas confundido de matricula porque esa ya existe en la lista.');window.location='registraTuCoche.html'</script>";
+    }
 
+    $resultado = mysqli_query($connection, $instruccion_SQL) or die (mysqli_error($connection));
+    
     if(!$resultado){
         echo"Hubo Algun Error";
     }else{
@@ -28,8 +34,3 @@
 
     
 ?>
-<html>
-<a href="loginCoche.html"><input type="submit" value="Identifica tu coche"></a>
-
-</html>
-

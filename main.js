@@ -1,5 +1,3 @@
-var correoUsuario;
-
 function validarRegistro(){
     if(malEmail(document.registro.email)) return;
     if(malNombre(document.registro.nombre)) return;
@@ -14,7 +12,6 @@ function validarRegistro(){
 
 function validarIdentificacion(){
     if(malEmail(document.identificacion.email)) return;
-    correoUsuario=document.getElementById("emailusuario").value;
     if(vacio(document.identificacion.password)) return;
 
     document.identificacion.submit()

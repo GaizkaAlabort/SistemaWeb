@@ -1,14 +1,14 @@
 function validarOpciones(){
-    if(malEmail(document.opciones.email)) return;
-    if(malNombre(document.opciones.nombre)) return;
-    if(malTLF(document.opciones.telefono)) return;
-    if(malDNI(document.opciones.dni)) return;
-    if(malFecha(document.opciones.FechaNacimiento)) return;
+    if(Emailmal(document.opciones.email)) return;
+    if(Nombremal(document.opciones.nombre)) return;
+    if(TLFmal(document.opciones.telefono)) return;
+    if(DNImal(document.opciones.dni)) return;
+    if(Fechamal(document.opciones.FechaNacimiento)) return;
 
     document.opciones.submit()
 }
 
-function malEmail(campo){
+function Emailmal(campo){
     var camp=campo.value;
     
     if(camp.length==0){
@@ -27,7 +27,7 @@ function malEmail(campo){
     }
 }
 
-function malNombre(campo){
+function Nombremal(campo){
     var camp=campo.value;
     
     if(camp.length==0){
@@ -46,7 +46,7 @@ function malNombre(campo){
     }
 }
 
-function malTLF(campo){
+function TLFmal(campo){
     var camp=campo.value;
     
     if(camp.length==0){
@@ -65,7 +65,7 @@ function malTLF(campo){
     }
 }
 
-function malDNI(campo){
+function DNImal(campo){
     var camp=campo.value;
     
     if(camp.length==0){
@@ -170,7 +170,7 @@ function malDNI(campo){
     }
 }
 
-function malFecha(campo){
+function Fechamal(campo){
     var camp=campo.value;
     
     if(camp.length==0){
