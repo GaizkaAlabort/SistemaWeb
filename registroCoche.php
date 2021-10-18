@@ -1,8 +1,8 @@
 <?php 
-    $user = "admin";
-    $pass="test";
-    $host="db";
-    $dataBase="database";
+    $user = "root";
+    $pass="";
+    $host="localhost";
+    $dataBase="SistemaWeb";
     
     $connection = mysqli_connect($host,$user,$pass,$dataBase);
     if ($connection->connect_error) {
