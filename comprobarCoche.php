@@ -1,11 +1,16 @@
-<title>Cargando</title>
-
 <?php 
     session_start();
+    echo"<title>Cargando</title>";
    $user = "root";
    $pass="";
    $host="localhost";
    $dataBase="SistemaWeb";
+
+    #para docker utilizar: 
+    #$user = "admin";
+    #$pass="test";
+    #$host="db";
+    #$dataBase="database";
     
     $connection = mysqli_connect($host,$user,$pass,$dataBase);
     if ($connection->connect_error) {
@@ -15,7 +20,7 @@
     $matricula = $_POST["matricula"];
     $_SESSION['matricula'] = $matricula;
     
-    $instruccion_SQL="SELECT * FROM tablaCoches WHERE matricula='$matricula'";
+    $instruccion_SQL="SELECT * FROM tablacoches WHERE matricula='$matricula'";
 
     $resultado = mysqli_query($connection, $instruccion_SQL) or die (mysqli_error($connection));
     
