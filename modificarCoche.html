@@ -7,7 +7,7 @@
     <title>AlquilaTuCoche</title>
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="registroCoche.js"></script>
 
 </head>
 <body>
@@ -24,19 +24,18 @@
                     
                 <div class="formularioRegistro">
                     <div class="modificarCoche"><h6>Introduce los datos que quieres cambiar de tu coche</h6></div>
-                        <form name="registro" action="index.html" method="post">
-                            <input type="text" name="marca" placeholder="Introduce La marca que quieres cambiar " required>
-                            <input type="text" name="modelo" placeholder="Introduce el modelo del coche" required>
-                            <input type="text" name="caballos" placeholder="Introduce el n&uacute;mero de caballos" required>
-                            <input type="text" name="matricula" placeholder="Introduce la matricula a cambiar" required>
-                            <input type="text" name="telefono" placeholder="Introduce tel&eacute;fono" required>
+                        <form name="modificarCocheMatricula" action="modificarCoche.php" method="post">
+                            <input type="text" name="marca" placeholder="Introduce La marca que quieres cambiar ">
+                            <input type="text" name="modelo" placeholder="Introduce el modelo del coche">
+                            <input type="text" name="caballos" placeholder="Introduce el n&uacute;mero de caballos">
+                            <input type="text" name="matricula" placeholder="Introduce la matricula a cambiar">
+                            <input type="text" name="telefono" placeholder="Introduce tel&eacute;fono">
                             
-                            
-                            <input type="submit" value="Enviar" href="index.html" >
+                            <input type="button" value="Enviar" onclick="validarModificacion()" href="index.html">
                         </form>
 
-                        <form name="registro" action="index.html" method="post">
-                            <input type="button" value="Eliminar" href="mostrarCochesQueSeAlquilan.php" >
+                        <form name="eliminarMatricula" action="eliminarCoche.php" method="post">
+                            <input type="submit" value="Eliminar">
                         </form>
             </div>
             

@@ -17,6 +17,14 @@ function validarIdentificacion(){
     document.identificacion.submit()
 }
 
+function validarModificacion(){
+    if(malnumMod(document.modificarCocheMatricula.caballos)) return;
+    if(malmatriculaMod(document.modificarCocheMatricula.matricula)) return;
+    if(malTLFMod(document.modificarCocheMatricula.telefono)) return;
+
+    document.modificarCocheMatricula.submit()
+}
+
 function vacio(campo)
 {
     texto=campo.value;
@@ -71,4 +79,68 @@ function malTLF(campo){
         return true;
     }
     return false;
+}
+
+function malnumMod(campo){
+    var camp=campo.value;
+    
+    if(camp.length==0){
+        return false; 
+    
+    } else {
+        var caballos=/^[0-9]+$/;
+
+        if(!caballos.test(campo.value)){
+            alert("El numero de caballos " + campo.value + " es incorrecto.");
+            campo.focus();
+            campo.select();
+            return true;
+        }
+    
+        if(campo.value>1500 || campo.value<0){
+            alert("El numero de caballos " + campo.value + " es imposible.");
+            campo.focus();
+            campo.select();
+            return true;
+        }
+        return false;
+    }
+}
+
+function malmatriculaMod(campo){
+    var camp=campo.value;
+    
+    if(camp.length==0){
+        return false; 
+    
+    } else {
+        var matricula=/^[0-9]{4}[A-Z]{3}$/;
+
+        if(!matricula.test(campo.value)){
+            alert("La matricula " + campo.value + " es incorrecta o es un vehiculo especial.");
+            campo.focus();
+            campo.select();
+            return true;
+        }
+        return false;
+    }
+}
+
+function malTLFMod(campo){
+    var camp=campo.value;
+    
+    if(camp.length==0){
+        return false; 
+    
+    } else {
+        var telefono=/^[0-9]{9}$/;
+
+        if(!telefono.test(campo.value)){
+            alert("El telefono " + campo.value + " es incorrecto.");
+            campo.focus();
+            campo.select();
+            return true;
+        }
+        return false;
+    }
 }

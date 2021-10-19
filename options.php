@@ -26,6 +26,10 @@
     {
         $email_SQL="UPDATE tabla SET email = '$email' WHERE email = '$correoUsuario'";
 
+        if (!mysqli_query($connection, $email_SQL)) {
+            echo"<script>alert('Comprueba lo que has escrito. Puede que te hayas confundido en el correo.');window.location='options.php'</script>";
+        }
+
         $resultadoEmail = mysqli_query($connection, $email_SQL) or die (mysqli_error($connection));
     
     }
@@ -71,9 +75,7 @@
         $resultadoFecha = mysqli_query($connection, $fecha_SQL) or die (mysqli_error($connection));
     
     }
-    
-    #if(!$resultado){
-        #echo"Hubo Algun Error";
-    #}
-    
+
+    echo"<script>alert('Cambios realizados con éxito.');window.location='login.html'</script>";
+
 ?>

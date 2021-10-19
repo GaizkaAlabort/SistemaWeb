@@ -12,21 +12,14 @@
         die("Database connection failed: " . $connection->connect_error);
     }
     
-    $matricula = $_POST["matricula"];
-    $_SESSION['matricula'] = $matricula;
+    $matriculaModificar = $_SESSION['matricula'];
     
-    $instruccion_SQL="SELECT * FROM tablaCoches WHERE matricula='$matricula'";
+    $instruccion_SQL="DELETE from tablacoches where matricula='$matriculaModificar'";
 
     $resultado = mysqli_query($connection, $instruccion_SQL) or die (mysqli_error($connection));
-    
+
     if(!$resultado){
         echo"Hubo Algun Error";
     }else{
-        if($resultado->num_rows == 1){
-                echo"<script>window.location='modificarCoche.html'</script>";
-        } else {
-            echo"<script>alert('La matricula no existe'); window.location='elegirCocheParaEditar.html'</script>";
-        }
+        echo"<script>alert('Se ha eliminado el coche con matricula= $matriculaModificar' ); window.location='mostrarCochesQueAlquilan.php'</script>";
     }
-    
-?>
