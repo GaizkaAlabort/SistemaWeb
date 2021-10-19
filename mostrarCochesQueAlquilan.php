@@ -9,13 +9,14 @@
     #$user = "admin";
     #$pass="test";
     #$host="db";
+    #$dataBase="database";
     
     $connection = mysqli_connect($host,$user,$pass,$dataBase);
     if ($connection->connect_error) {
         die("Database connection failed: " . $connection->connect_error);
     }
 
-    $query= mysqli_query($connection, "SELECT * FROM tablaCoches") or die(mysqli_error($connection));
+    $query= mysqli_query($connection, "SELECT * FROM tablacoches") or die(mysqli_error($connection));
 ?>
 
 
