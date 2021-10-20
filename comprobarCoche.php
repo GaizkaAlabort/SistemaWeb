@@ -30,7 +30,7 @@
         if($resultado->num_rows == 1){
                 echo"<script>window.location='modificarCoche.html'</script>";
         } else {
-            echo"<script>alert('La matricula no existe'); window.location='elegirCocheParaEditar.html'</script>";
+            echo"<script>alert('La matricula no existe'); window.location='mostrarCochesQueAlquilan.php'</script>";
         }
     }
     

@@ -25,11 +25,12 @@
                 <div class="formularioRegistro">
                     <div class="RegistraCoche"><h1>Introduce los datos de tu coche</h1></div>
                         <form name="registro" action="registroCoche.php" method="post">
-                            <input type="text" name="marca" placeholder="Introduce La marca ">
+                            <input type="text" name="marca" placeholder="Introduce La marca">
                             <input type="text" name="modelo" placeholder="Introduce el modelo del coche">
-                            <input type="text" name="caballos" placeholder="Introduce el n&uacute;mero de caballos">
-                            <input type="text" name="matricula" placeholder="Introduce la matricula con letras mayúsculas">
-                            <input type="text" name="telefono" placeholder="Introduce tel&eacute;fono">
+                            <input type="text" name="caballos" placeholder="Introduce el n&uacute;mero de caballos (0-1500)">
+                            <input type="text" name="matricula" placeholder="Introduce la matricula con mayúsculas (1234ABC)">
+                            <input type="text" name="telefono" placeholder="Introduce tel&eacute;fono (612345678)">
+                            <input type="text" name="precio" placeholder="Introduce precio (0-99999)">
                             <input type="button" value="Enviar" onclick="validarRegistroCoches()">
                         </form>
 

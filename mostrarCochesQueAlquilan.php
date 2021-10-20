@@ -19,12 +19,8 @@
     $query= mysqli_query($connection, "SELECT * FROM tablacoches") or die(mysqli_error($connection));
 ?>
 
-
 <html>
 <body>
-    
-
-
 
         <table class="tabla">
   		
@@ -34,6 +30,7 @@
 			    <th>Caballos</th>
 			    <th>Matricula</th>
 			    <th>Telefono</th>
+                <th>Precio</th>
 	        </tr>
 
 
@@ -42,7 +39,6 @@
 
     while($row = mysqli_fetch_array($query)){
     ?>
-
        
         <tr>
              <td> <?php echo $row["marca"]?> </td>
@@ -50,7 +46,7 @@
              <td> <?php echo $row["caballos"]?> </td>
              <td> <?php echo $row["matricula"]?> </td>
              <td> <?php echo $row["telefono"]?> </td>
-   
+             <td> <?php echo $row["precio"]?> </td>
              </tr>
     
 <?php
