@@ -22,6 +22,7 @@
     $caballos = $_POST["caballos"];
     $matricula = $_POST["matricula"];
     $telefono = $_POST["telefono"];
+    $precio = $_POST["precio"];
 
     $comprobacion_SQL="SELECT matricula FROM tablacoches WHERE matricula='$matricula'";
 
@@ -30,7 +31,7 @@
     if($resultadoComprobacion->num_rows== 0){
         
         $resultadoComprobacion->close();
-        $instruccion_SQL="INSERT INTO tablacoches (marca, modelo, caballos, matricula, telefono) VALUES ('$marca','$modelo','$caballos','$matricula','$telefono')";
+        $instruccion_SQL="INSERT INTO tablacoches (marca, modelo, caballos, matricula, telefono, precio) VALUES ('$marca','$modelo','$caballos','$matricula','$telefono','$precio')";
 
         $resultado = mysqli_query($connection, $instruccion_SQL) or die (mysqli_error($connection));
         

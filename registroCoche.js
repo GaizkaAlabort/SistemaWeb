@@ -6,6 +6,7 @@ function validarRegistroCoches(){
     if(malnum(document.registro.caballos)) return;
     if(malmatricula(document.registro.matricula)) return;
     if(malTLF(document.registro.telefono)) return;
+    if(malprecio(document.registro.precio)) return;
 
     document.registro.submit()
 }
@@ -21,6 +22,7 @@ function validarModificacion(){
     if(malnumMod(document.modificarCocheMatricula.caballos)) return;
     if(malmatriculaMod(document.modificarCocheMatricula.matricula)) return;
     if(malTLFMod(document.modificarCocheMatricula.telefono)) return;
+    if(malprecioMod(document.modificarCocheMatricula.precio)) return;
 
     document.modificarCocheMatricula.submit()
 }
@@ -31,6 +33,25 @@ function vacio(campo)
 
     if (texto.length < 1) {
         alert("Tienes que completar todos los campos.");
+        campo.focus();
+        campo.select();
+        return true;
+    }
+    return false;
+}
+
+function malprecio(campo){
+    var precio=/^[0-9]+$/;
+
+    if(!precio.test(campo.value)){
+        alert("El precio " + campo.value + " es incorrecto.");
+        campo.focus();
+        campo.select();
+        return true;
+    }
+    
+    if(campo.value>100000 || campo.value<0){
+        alert("El precio debe estar entre 0 y 99999.");
         campo.focus();
         campo.select();
         return true;
@@ -137,6 +158,32 @@ function malTLFMod(campo){
 
         if(!telefono.test(campo.value)){
             alert("El telefono " + campo.value + " es incorrecto.");
+            campo.focus();
+            campo.select();
+            return true;
+        }
+        return false;
+    }
+}
+
+function malprecioMod(campo){
+    var camp=campo.value;
+    
+    if(camp.length==0){
+        return false; 
+    
+    } else {
+        var precio=/^[0-9]+$/;
+
+        if(!precio.test(campo.value)){
+            alert("El precio " + campo.value + " es incorrecto.");
+            campo.focus();
+            campo.select();
+            return true;
+        }
+    
+        if(campo.value>100000 || campo.value<0){
+            alert("El precio debe estar entre 0 y 99999.");
             campo.focus();
             campo.select();
             return true;
