@@ -48,7 +48,7 @@
              <td> <?php echo $row["matricula"]?> </td>
              <td> <?php echo $row["telefono"]?> </td>
              <td> <?php echo $row["precio"]?> </td>
-             <td> <a href="modificarCoche.php?id=<?php echo $row["matricula"]?>">Modificar</a> </td>
+             <td> <a href="comprobarCoche.php?id=<?php echo $row["matricula"]?>">Modificar</a> </td>
              </tr>
     
 <?php
