@@ -12,12 +12,13 @@
     #$host="db";
     #$dataBase="database";
     
+    
     $connection = mysqli_connect($host,$user,$pass,$dataBase);
     if ($connection->connect_error) {
         die("Database connection failed: " . $connection->connect_error);
     }
     
-    $matricula = $_POST["matricula"];
+    $matricula =$_GET["id"];
     $_SESSION['matricula'] = $matricula;
     
     $instruccion_SQL="SELECT * FROM tablacoches WHERE matricula='$matricula'";
