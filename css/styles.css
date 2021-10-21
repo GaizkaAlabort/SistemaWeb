@@ -468,25 +468,25 @@ h7{
 .tabla{
     margin: auto;
     border-collapse: collapse;
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Gemunu Libre', sans-serif; ;
 
 }
 .tabla th{
-    border: 1px solid #dddddd;
+    border: 1px solid white;
     background-color: #2cbcff;
     text-align: center;
-    font-size: 2vw;
+    font-size: 3vw;
     padding: 8px;
   }
 .tabla td{
-    border: 1px solid #dddddd;
+    border: 1px solid #ffffff;
     text-align: center;
-    font-size: 1.25vw;
-    padding: 8px;
+    font-size: 1.40vw;
+    padding: 10px;
   }
    .tabla tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #ffffff;
   }

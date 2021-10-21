@@ -60,7 +60,13 @@
         <a href="index.html">Concesionario Gajo</a>
     </header> 
 
-    <?php echo $email;?>
+    <?php 
+    
+
+    echo"<h3>Bienvenido: $email</h3>";
+    
+    
+    ?>
 
     <section>
         <div>
