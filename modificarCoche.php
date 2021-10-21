@@ -17,7 +17,7 @@
         die("Database connection failed: " . $connection->connect_error);
     }
     
-    $matriculaModificar = $_SESSION['matricula'];
+    $matriculaModificar =$_SESSION["matricula"];
     
     $marca = $_POST["marca"];
     $modelo = $_POST["modelo"];
@@ -105,6 +105,6 @@
     if($constante>0){
         echo"<script>alert('Se ha actualizado el coche con matricula $matriculaModificar correctamente'); window.location='mostrarCochesQueAlquilan.php'</script>";
     }else{
-        echo"<script>window.location='modificarCoche.html'</script>";
+        echo"<script>window.location='mostrarCochesQueAlquilan.php'</script>";
     }
 ?>
