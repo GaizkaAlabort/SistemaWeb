@@ -1,16 +1,10 @@
 <title>Cargando</title>
 
 <?php 
-    $user = "root";
-    $pass="";
-    $host="localhost";
-    $dataBase="SistemaWeb";
-
-    #para docker utilizar: 
-    #$user = "admin";
-    #$pass="test";
-    #$host="db";
-    #$dataBase="database";
+    $user = "admin";
+    $pass="test";
+    $host="db";
+    $dataBase="database";
     
     $connection = mysqli_connect($host,$user,$pass,$dataBase);
     if ($connection->connect_error) {
