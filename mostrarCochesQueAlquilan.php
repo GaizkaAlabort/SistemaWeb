@@ -1,15 +1,9 @@
 <?php 
- echo "<link rel=stylesheet href=css/styles.css>";
-    $user = "root";
-    $pass="";
-    $host="localhost";
-    $dataBase="SistemaWeb";
-    
-    #para docker utilizar: 
-    #$user = "admin";
-    #$pass="test";
-    #$host="db";
-    #$dataBase="database";
+    echo "<link rel=stylesheet href=css/styles.css>";
+    $user = "admin";
+    $pass="test";
+    $host="db";
+    $dataBase="database";
     
     $connection = mysqli_connect($host,$user,$pass,$dataBase);
     if ($connection->connect_error) {

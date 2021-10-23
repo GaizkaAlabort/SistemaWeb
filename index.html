@@ -8,6 +8,15 @@
     <title>ConcesionarioGajo</title>
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function Escribir(){
+            let marca = localStorage.getItem('marca');
+            let marca = localStorage.getItem('modelo');
+            document.write("Marca: "+ Marca());
+            document.write("Modelo: " + Modelo());
+            localStorage.clear();
+        }
+    </script>
     
 </head>
 
@@ -51,7 +60,7 @@
                
             <div class="popup-image">
                 <span>&times;</span>
-                <img src="Imagenes/1.jpg" alt="">
+                <img src="Imagenes/Lamborghini-Huracan.jpg" alt="">
                
                 <div class="formularioCoches">
                    

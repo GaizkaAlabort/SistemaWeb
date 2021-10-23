@@ -1,15 +1,9 @@
 <?php 
-    session_start();
-   $user = "root";
-   $pass="";
-   $host="localhost";
-   $dataBase="SistemaWeb";
-
-   #para docker utilizar: 
-    #$user = "admin";
-    #$pass="test";
-    #$host="db";
-    #$dataBase="database";
+    session_start(); 
+    $user = "admin";
+    $pass="test";
+    $host="db";
+    $dataBase="database";
     
     $connection = mysqli_connect($host,$user,$pass,$dataBase);
     if ($connection->connect_error) {
@@ -76,13 +70,14 @@
             <div class="formularioRegistro">    
                 <div class="modificarUsuario"><h2>Modifica los datos</h2></div>
                      <form name="opciones" action="options.php" method="post">
-                        <input type="text" name="email" placeholder="Introduce el email al que quieras cambiar">
+                     <input type="text" name="email" placeholder="Introduce nuevo email (ejemplo@ejemplo.com)">
                         <input type="text" name="nombre" placeholder="Introduce el nombre">
                         <input type="text" name="apellidos" placeholder="Introduce apellidos">
-                        <input type="password" name="contraseña" placeholder="Introduce la contraseña a la que quieras cambiar">
-                        <input type="text" name="telefono" placeholder="Introduce el tel&eacute;fono al que quieras cambiar">
-                        <input type="text" name="dni" placeholder="Introduce DNI">
+                        <input type="password" name="contraseña" placeholder="Introduce la nueva contraseña ">
+                        <input type="text" name="telefono" placeholder="Introduce el nuevo tel&eacute;fono (612345678)">
+                        <input type="text" name="dni" placeholder="Introduce DNI (12345678A)">
                         <h7>Fecha de nacimiento:</h7> <input type="date" name="FechaNacimiento">
+                        
                         <br></br>
 
 
